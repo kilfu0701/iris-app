@@ -1,4 +1,4 @@
 *.swp
 *.swo
 
-src/vendor
+src/app/vendor
