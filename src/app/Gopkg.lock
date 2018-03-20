@@ -105,8 +105,8 @@
     "middleware/recover",
     "view"
   ]
-  revision = "0c841013385c284695f2336b672101168d748480"
-  version = "v10.3.0"
+  revision = "fea1d88aac097bdd4f7edf5d7c48311a55534b92"
+  version = "v10.4.0"
 
 [[projects]]
   branch = "master"
@@ -241,6 +241,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "67928c1daba74730ea26db4391a701c3a989da04d7ba54b4d0f771de9c7721a7"
+  inputs-digest = "cc39198167c77d7c3815695caf8b48791c98da08bfa5bffde6d414b7722eebbd"
   solver-name = "gps-cdcl"
   solver-version = 1
