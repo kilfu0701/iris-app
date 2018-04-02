@@ -1,4 +1,6 @@
 *.swp
 *.swo
 
+!.keep
 src/app/vendor
+src/app/tmp/*

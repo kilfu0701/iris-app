@@ -47,6 +47,24 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/go-xorm/builder"
+  packages = ["."]
+  revision = "a9b7ffcca3f0c6445c4e3b1bf72c01578817a6c3"
+
+[[projects]]
+  name = "github.com/go-xorm/core"
+  packages = ["."]
+  revision = "da1adaf7a28ca792961721a34e6e04945200c890"
+  version = "v0.5.7"
+
+[[projects]]
+  name = "github.com/go-xorm/xorm"
+  packages = ["."]
+  revision = "1933dd69e294c0a26c0266637067f24dbb25770c"
+  version = "v0.6.4"
+
+[[projects]]
+  branch = "master"
   name = "github.com/hashicorp/go-version"
   packages = ["."]
   revision = "4fe82ae3040f80a03d04d2cccb5606a626b8e1ee"
@@ -105,8 +123,8 @@
     "middleware/recover",
     "view"
   ]
-  revision = "fea1d88aac097bdd4f7edf5d7c48311a55534b92"
-  version = "v10.4.0"
+  revision = "41b17aca9ec493f6eedf17c0e5545cf134f2d445"
+  version = "v10.5.0"
 
 [[projects]]
   branch = "master"
@@ -159,6 +177,12 @@
   packages = ["."]
   revision = "0360b2af4f38e8d38c7fce2a9f4e702702d73a39"
   version = "v0.0.3"
+
+[[projects]]
+  name = "github.com/mattn/go-sqlite3"
+  packages = ["."]
+  revision = "6c771bb9887719704b210e87e934f08be014bdb1"
+  version = "v1.6.0"
 
 [[projects]]
   branch = "master"
@@ -235,12 +259,12 @@
 [[projects]]
   name = "gopkg.in/yaml.v2"
   packages = ["."]
-  revision = "7f97868eec74b32b0982dd158a51a446d1da7eb5"
-  version = "v2.1.1"
+  revision = "5420a8b6744d3b0345ab293f6fcba19c978f1183"
+  version = "v2.2.1"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "cc39198167c77d7c3815695caf8b48791c98da08bfa5bffde6d414b7722eebbd"
+  inputs-digest = "0267f52e5014020b819423b778d64814a8e6da017f221eaa1918650b0dd0f4e4"
   solver-name = "gps-cdcl"
   solver-version = 1
