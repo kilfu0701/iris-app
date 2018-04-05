@@ -46,6 +46,13 @@ func main() {
 	}
 
 	// -------------
+	// insert dummy data
+	// -------------
+	if err := models.InsertDummyData(orm); err != nil {
+		app.Logger().Fatalf("failed to insert dummy data: %v", err)
+	}
+
+	// -------------
 	// init routes
 	// -------------
 	routes.Init(app)
@@ -54,5 +61,10 @@ func main() {
 	app.RegisterView(iris.HTML("./views", ".html"))
 
 	// http://localhost:9000
-	app.Run(iris.Addr(":" + strconv.Itoa(config.Env.Port)), iris.WithoutServerError(iris.ErrServerClosed))
+	app.Run(
+		iris.Addr(":" + strconv.Itoa(config.Env.Port)),
+		iris.WithoutVersionChecker,
+		iris.WithoutServerError(iris.ErrServerClosed),
+		iris.WithOptimizations,
+	)
 }

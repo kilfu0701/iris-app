@@ -7,11 +7,11 @@ import (
 )
 
 func ApiRoutes(app *iris.Application) {
-	apiRoutes := app.Party("/api", apiMiddleware)
+	apiRoutes := app.Party("/api", loginMiddleware)
 
 	apiRoutes.Get("/hello", api.Hello)
 }
 
-func apiMiddleware(ctx iris.Context) {
+func loginMiddleware(ctx iris.Context) {
 	ctx.Next()
 }
