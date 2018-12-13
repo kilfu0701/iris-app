@@ -2,10 +2,13 @@ package routes
 
 import (
 	"github.com/kataras/iris"
+
+	"app/routes/user"
+	//"src/app/routes/admin"
 )
 
 func Init(app *iris.Application) {
-	AppRoutes(app)
-	ApiRoutes(app)
+	user_routes.AppRoutes(app)
+	user_routes.ApiRoutes(app)
 	//adminRoutes(app)
 }

@@ -2,11 +2,14 @@ package main
 
 import (
 	"strconv"
+	"time"
 
 	"github.com/go-xorm/xorm"
 	"github.com/kataras/iris"
 	"github.com/kataras/iris/middleware/logger"
 	"github.com/kataras/iris/middleware/recover"
+	//"github.com/kataras/iris/mvc"
+	"github.com/kataras/iris/sessions"
 	_ "github.com/mattn/go-sqlite3"
 
 	"app/config"
@@ -15,6 +18,11 @@ import (
 )
 
 func main() {
+	setupUserSite()
+	setupAdminSite()
+}
+
+func setupUserSite() {
 	app := iris.New()
 
 	app.Logger().SetLevel("debug")
@@ -57,8 +65,13 @@ func main() {
 	// -------------
 	routes.Init(app)
 
+	_ = sessions.New(sessions.Config{
+		Cookie:  "IRIS_SID",
+		Expires: 24 * time.Hour,
+	})
+
 	// Register a view engine on .html files inside the ./view/** directory.
-	app.RegisterView(iris.HTML("./views", ".html"))
+	app.RegisterView(iris.HTML("./views/user", ".html"))
 
 	// http://localhost:9000
 	app.Run(
@@ -67,4 +80,8 @@ func main() {
 		iris.WithoutServerError(iris.ErrServerClosed),
 		iris.WithOptimizations,
 	)
+}
+
+func setupAdminSite() {
+
 }
